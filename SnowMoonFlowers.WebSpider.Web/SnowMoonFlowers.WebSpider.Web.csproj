@@ -349,7 +349,6 @@
     <Content Include="Scripts\toastr.min.js" />
     <Content Include="Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -360,7 +359,6 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Models\Layout\LanguageSelectionViewModel.cs" />
-    <Compile Include="Controllers\LayoutController.cs" />
     <Compile Include="Controllers\WebSpiderControllerBase.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

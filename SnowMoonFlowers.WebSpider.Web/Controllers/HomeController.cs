@@ -13,7 +13,7 @@ namespace SnowMoonFlowers.WebSpider.Web.Controllers
         }
         public ActionResult Index()
         {
-            _res.InsertBiliBiliWebSiteOfHtml("www.bilibili.com");
+            _res.InsertBiliBiliWebSiteOfHtml("http://www.bilibili.com");
             return View();
         }
 	}

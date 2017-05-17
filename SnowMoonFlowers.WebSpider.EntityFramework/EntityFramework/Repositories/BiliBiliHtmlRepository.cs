@@ -52,7 +52,7 @@ namespace SnowMoonFlowers.WebSpider.EntityFramework.Repositories
         //    BiliBiliHtml data1 = _context.BiliBiliHtmls.FirstOrDefault();
 
 
-            string html = GetBiliBiliWebStaticSiteData(url, Encoding.UTF8);
+            string html =  GetBiliBiliWebStaticSiteData(url, Encoding.UTF8);
 
 
             //添加主站
@@ -64,18 +64,21 @@ namespace SnowMoonFlowers.WebSpider.EntityFramework.Repositories
             data.HtmlContent = "";
             data.ProtocolType = Facility.Enums.EnumProtocolType.HTTPS;
             _context.BiliBiliHtmls.Add(data);
+            
 
-
-
-            html = Regex.Replace(html.Trim(), "\\s+", " ");
+            //html = Regex.Replace(html.Trim(), "\\s+", " ");
             //Match m = Regex.Match(html, "<div class=\"menu.*\">.*</div>");
 
 
+            // < 尖括号在正则中算是一个特殊字符，在显式捕获分组中用它将分组名括起来。但是因为开头的尖括号在此上下文下并不会出现解析歧义，因此加不加转义符效果是一样的。
+            // (?<GroupName>RegEx)格式定义一个命名分组，我们在上面定义了一个HtmlTag的标签分组，用来存放匹配到的Html标签名。Quote分组是用来给后面的匹配使用的。
 
-            //string str1= m.Groups[0].Value;
+
+            Match m = Regex.Match(html, "<(?<HtmlTag>[\\w]+)[^>]*\\s(class)|(id)=(?<Quote>[\"]?)menu.*(?(Quote)\\k<Quote>)[\"]?[^>]*>((?<Nested><\\k<HtmlTag>[^>]*>)|</\\k<HtmlTag>>(?<-Nested>)|.*?)*</\\k<HtmlTag>>");
+            string str1= m.Groups[0].Value;
 
 
-            Match m = Regex.Match(html, "<(?<HtmlTag>[\\w]+)[^>]*\\s(?class|id)=(?<Quote>[\"']?)menu.*(?(Quote)\\k<Quote>)[\"']?[^>]*>((?<Nested><\\k<HtmlTag>[^>]*>)|</\\k<HtmlTag>>(?<-Nested>)|.*?)*</\\k<HtmlTag>>");
+            //Match m = Regex.Match(html, "<(?<HtmlTag>[\\w]+)[^>]*\\sclass=(?<Quote>[\"']?)menu.*(?(Quote)\\k<Quote>)[^>]*?(/>|>((?<Nested><\\k<HtmlTag>[^>]*>)|</\\k<HtmlTag>>(?<-Nested>)|.*?)*</\\k<HtmlTag>>)");
 
 
             int i= _context.SaveChanges();
@@ -120,7 +123,7 @@ namespace SnowMoonFlowers.WebSpider.EntityFramework.Repositories
                 }
                 else if(e.Status == WebExceptionStatus.ConnectFailure) {
                     _tryTimes = 0;
-                    InitWebProxy();
+                    //InitWebProxy();
                     return GetBiliBiliWebStaticSiteData(url, encoding, IsUsedProxy);
                 }
                 else

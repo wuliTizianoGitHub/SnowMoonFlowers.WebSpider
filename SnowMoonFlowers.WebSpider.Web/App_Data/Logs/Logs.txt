@@ -148,3 +148,279 @@ DEBUG 2017-05-17 13:34:39,713 [42   ] Abp.Modules.AbpModuleManager             -
 DEBUG 2017-05-17 13:34:39,713 [42   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
 DEBUG 2017-05-17 13:34:39,714 [42   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
 DEBUG 2017-05-17 13:34:39,714 [42   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-05-17 15:38:04,397 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-05-17 15:38:04,416 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2017-05-17 15:38:04,429 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.Web.WebSpiderWebModule, SnowMoonFlowers.WebSpider.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:38:04,431 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:38:04,432 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:38:04,432 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:38:04,432 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:38:04,432 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderDataModule, SnowMoonFlowers.WebSpider.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:38:04,432 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:38:04,433 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderCoreModule, SnowMoonFlowers.WebSpider.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:38:04,433 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderApplicationModule, SnowMoonFlowers.WebSpider.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:38:04,433 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderWebApiModule, SnowMoonFlowers.WebSpider.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:38:04,433 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:38:04,436 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2017-05-17 15:38:04,886 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: SnowMoonFlowers.WebSpider.EntityFramework.WebSpiderDbContext, SnowMoonFlowers.WebSpider.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:38:06,570 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2017-05-17 15:38:06,578 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-05-17 15:38:06,579 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-05-17 15:38:06,582 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: WebSpider
+DEBUG 2017-05-17 15:38:07,414 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+WARN  2017-05-17 15:38:07,570 [5    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2017-05-17 15:38:07,598 [5    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+ERROR 2017-05-17 15:38:27,280 [5    ] WebSpider.Web.Controllers.HomeController - 无效的 URI: 未能确定 URI 的格式。
+System.UriFormatException: 无效的 URI: 未能确定 URI 的格式。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 SnowMoonFlowers.WebSpider.EntityFramework.Repositories.BiliBiliHtmlRepository.GetBiliBiliWebStaticSiteData(String url, Encoding encoding, Boolean IsUsedProxy) 位置 D:\个人~~\学习\爬虫\demo\SnowMoonFlowers.WebSpider.EntityFramework\EntityFramework\Repositories\BiliBiliHtmlRepository.cs:行号 100
+   在 SnowMoonFlowers.WebSpider.EntityFramework.Repositories.BiliBiliHtmlRepository.InsertBiliBiliWebSiteOfHtml(String url) 位置 D:\个人~~\学习\爬虫\demo\SnowMoonFlowers.WebSpider.EntityFramework\EntityFramework\Repositories\BiliBiliHtmlRepository.cs:行号 55
+   在 SnowMoonFlowers.WebSpider.Web.Controllers.HomeController.Index() 位置 D:\个人~~\学习\爬虫\demo\SnowMoonFlowers.WebSpider.Web\Controllers\HomeController.cs:行号 16
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+ERROR 2017-05-17 15:40:45,916 [13   ] WebSpider.Web.Controllers.HomeController - 无效的 URI: 未能确定 URI 的格式。
+System.UriFormatException: 无效的 URI: 未能确定 URI 的格式。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 SnowMoonFlowers.WebSpider.EntityFramework.Repositories.BiliBiliHtmlRepository.GetBiliBiliWebStaticSiteData(String url, Encoding encoding, Boolean IsUsedProxy) 位置 D:\个人~~\学习\爬虫\demo\SnowMoonFlowers.WebSpider.EntityFramework\EntityFramework\Repositories\BiliBiliHtmlRepository.cs:行号 100
+   在 SnowMoonFlowers.WebSpider.EntityFramework.Repositories.BiliBiliHtmlRepository.InsertBiliBiliWebSiteOfHtml(String url) 位置 D:\个人~~\学习\爬虫\demo\SnowMoonFlowers.WebSpider.EntityFramework\EntityFramework\Repositories\BiliBiliHtmlRepository.cs:行号 55
+   在 SnowMoonFlowers.WebSpider.Web.Controllers.HomeController.Index() 位置 D:\个人~~\学习\爬虫\demo\SnowMoonFlowers.WebSpider.Web\Controllers\HomeController.cs:行号 16
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+DEBUG 2017-05-17 15:44:27,874 [18   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-05-17 15:44:27,875 [18   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-05-17 15:44:27,876 [18   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-05-17 15:44:27,876 [18   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-05-17 15:44:40,696 [40   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-05-17 15:44:40,715 [40   ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2017-05-17 15:44:40,722 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.Web.WebSpiderWebModule, SnowMoonFlowers.WebSpider.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:44:40,726 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:44:40,726 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:44:40,726 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:44:40,726 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:44:40,727 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderDataModule, SnowMoonFlowers.WebSpider.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:44:40,727 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:44:40,727 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderCoreModule, SnowMoonFlowers.WebSpider.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:44:40,728 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderApplicationModule, SnowMoonFlowers.WebSpider.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:44:40,728 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderWebApiModule, SnowMoonFlowers.WebSpider.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:44:40,728 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:44:40,734 [40   ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2017-05-17 15:44:41,081 [40   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: SnowMoonFlowers.WebSpider.EntityFramework.WebSpiderDbContext, SnowMoonFlowers.WebSpider.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:44:41,996 [40   ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2017-05-17 15:44:42,002 [40   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-05-17 15:44:42,002 [40   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-05-17 15:44:42,005 [40   ] Abp.Localization.LocalizationManager     - Initialized localization source: WebSpider
+DEBUG 2017-05-17 15:44:42,360 [40   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+ERROR 2017-05-17 15:44:59,535 [16   ] WebSpider.Web.Controllers.HomeController - 无效的 URI: 未能确定 URI 的格式。
+System.UriFormatException: 无效的 URI: 未能确定 URI 的格式。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 SnowMoonFlowers.WebSpider.EntityFramework.Repositories.BiliBiliHtmlRepository.GetBiliBiliWebStaticSiteData(String url, Encoding encoding, Boolean IsUsedProxy) 位置 D:\个人~~\学习\爬虫\demo\SnowMoonFlowers.WebSpider.EntityFramework\EntityFramework\Repositories\BiliBiliHtmlRepository.cs:行号 100
+   在 SnowMoonFlowers.WebSpider.EntityFramework.Repositories.BiliBiliHtmlRepository.InsertBiliBiliWebSiteOfHtml(String url) 位置 D:\个人~~\学习\爬虫\demo\SnowMoonFlowers.WebSpider.EntityFramework\EntityFramework\Repositories\BiliBiliHtmlRepository.cs:行号 55
+   在 SnowMoonFlowers.WebSpider.Web.Controllers.HomeController.Index() 位置 D:\个人~~\学习\爬虫\demo\SnowMoonFlowers.WebSpider.Web\Controllers\HomeController.cs:行号 16
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+WARN  2017-05-17 15:45:03,870 [16   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2017-05-17 15:45:03,903 [16   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+ERROR 2017-05-17 15:45:16,833 [18   ] WebSpider.Web.Controllers.HomeController - 无效的 URI: 未能确定 URI 的格式。
+System.UriFormatException: 无效的 URI: 未能确定 URI 的格式。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 SnowMoonFlowers.WebSpider.EntityFramework.Repositories.BiliBiliHtmlRepository.GetBiliBiliWebStaticSiteData(String url, Encoding encoding, Boolean IsUsedProxy) 位置 D:\个人~~\学习\爬虫\demo\SnowMoonFlowers.WebSpider.EntityFramework\EntityFramework\Repositories\BiliBiliHtmlRepository.cs:行号 100
+   在 SnowMoonFlowers.WebSpider.EntityFramework.Repositories.BiliBiliHtmlRepository.InsertBiliBiliWebSiteOfHtml(String url) 位置 D:\个人~~\学习\爬虫\demo\SnowMoonFlowers.WebSpider.EntityFramework\EntityFramework\Repositories\BiliBiliHtmlRepository.cs:行号 55
+   在 SnowMoonFlowers.WebSpider.Web.Controllers.HomeController.Index() 位置 D:\个人~~\学习\爬虫\demo\SnowMoonFlowers.WebSpider.Web\Controllers\HomeController.cs:行号 16
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+DEBUG 2017-05-17 15:46:36,782 [24   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-05-17 15:46:36,784 [24   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-05-17 15:46:36,785 [24   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-05-17 15:46:36,785 [24   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-05-17 15:47:25,715 [40   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-05-17 15:47:25,732 [40   ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2017-05-17 15:47:25,738 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.Web.WebSpiderWebModule, SnowMoonFlowers.WebSpider.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:47:25,740 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:47:25,741 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:47:25,741 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:47:25,741 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:47:25,741 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderDataModule, SnowMoonFlowers.WebSpider.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:47:25,742 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:47:25,742 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderCoreModule, SnowMoonFlowers.WebSpider.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:47:25,742 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderApplicationModule, SnowMoonFlowers.WebSpider.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:47:25,742 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderWebApiModule, SnowMoonFlowers.WebSpider.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:47:25,742 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:47:25,746 [40   ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2017-05-17 15:47:26,109 [40   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: SnowMoonFlowers.WebSpider.EntityFramework.WebSpiderDbContext, SnowMoonFlowers.WebSpider.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:47:27,002 [40   ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2017-05-17 15:47:27,009 [40   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-05-17 15:47:27,010 [40   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-05-17 15:47:27,012 [40   ] Abp.Localization.LocalizationManager     - Initialized localization source: WebSpider
+DEBUG 2017-05-17 15:47:27,360 [40   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+ERROR 2017-05-17 15:47:44,030 [18   ] WebSpider.Web.Controllers.HomeController - 无效的 URI: 未能确定 URI 的格式。
+System.UriFormatException: 无效的 URI: 未能确定 URI 的格式。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 SnowMoonFlowers.WebSpider.EntityFramework.Repositories.BiliBiliHtmlRepository.GetBiliBiliWebStaticSiteData(String url, Encoding encoding, Boolean IsUsedProxy) 位置 D:\个人~~\学习\爬虫\demo\SnowMoonFlowers.WebSpider.EntityFramework\EntityFramework\Repositories\BiliBiliHtmlRepository.cs:行号 100
+   在 SnowMoonFlowers.WebSpider.EntityFramework.Repositories.BiliBiliHtmlRepository.InsertBiliBiliWebSiteOfHtml(String url) 位置 D:\个人~~\学习\爬虫\demo\SnowMoonFlowers.WebSpider.EntityFramework\EntityFramework\Repositories\BiliBiliHtmlRepository.cs:行号 55
+   在 SnowMoonFlowers.WebSpider.Web.Controllers.HomeController.Index() 位置 D:\个人~~\学习\爬虫\demo\SnowMoonFlowers.WebSpider.Web\Controllers\HomeController.cs:行号 16
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+DEBUG 2017-05-17 15:48:47,417 [35   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-05-17 15:48:47,419 [35   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-05-17 15:48:47,419 [35   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-05-17 15:48:47,419 [35   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-05-17 15:48:51,471 [40   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-05-17 15:48:51,938 [40   ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2017-05-17 15:48:51,945 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.Web.WebSpiderWebModule, SnowMoonFlowers.WebSpider.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:48:51,947 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:48:51,947 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:48:51,947 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:48:51,948 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:48:51,948 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderDataModule, SnowMoonFlowers.WebSpider.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:48:51,948 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:48:51,949 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderCoreModule, SnowMoonFlowers.WebSpider.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:48:51,949 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderApplicationModule, SnowMoonFlowers.WebSpider.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:48:51,949 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderWebApiModule, SnowMoonFlowers.WebSpider.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:48:51,949 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:48:51,952 [40   ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2017-05-17 15:48:52,950 [40   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: SnowMoonFlowers.WebSpider.EntityFramework.WebSpiderDbContext, SnowMoonFlowers.WebSpider.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:48:53,122 [40   ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2017-05-17 15:48:53,128 [40   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-05-17 15:48:53,129 [40   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-05-17 15:48:53,132 [40   ] Abp.Localization.LocalizationManager     - Initialized localization source: WebSpider
+DEBUG 2017-05-17 15:48:53,553 [40   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+ERROR 2017-05-17 15:49:09,442 [27   ] WebSpider.Web.Controllers.HomeController - 无效的 URI: 未能确定 URI 的格式。
+System.UriFormatException: 无效的 URI: 未能确定 URI 的格式。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 SnowMoonFlowers.WebSpider.EntityFramework.Repositories.BiliBiliHtmlRepository.GetBiliBiliWebStaticSiteData(String url, Encoding encoding, Boolean IsUsedProxy) 位置 D:\个人~~\学习\爬虫\demo\SnowMoonFlowers.WebSpider.EntityFramework\EntityFramework\Repositories\BiliBiliHtmlRepository.cs:行号 100
+   在 SnowMoonFlowers.WebSpider.EntityFramework.Repositories.BiliBiliHtmlRepository.InsertBiliBiliWebSiteOfHtml(String url) 位置 D:\个人~~\学习\爬虫\demo\SnowMoonFlowers.WebSpider.EntityFramework\EntityFramework\Repositories\BiliBiliHtmlRepository.cs:行号 55
+   在 SnowMoonFlowers.WebSpider.Web.Controllers.HomeController.Index() 位置 D:\个人~~\学习\爬虫\demo\SnowMoonFlowers.WebSpider.Web\Controllers\HomeController.cs:行号 16
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+DEBUG 2017-05-17 15:49:43,463 [27   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-05-17 15:49:43,465 [27   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-05-17 15:49:43,466 [27   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-05-17 15:49:43,466 [27   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-05-17 15:49:57,664 [40   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-05-17 15:49:57,681 [40   ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2017-05-17 15:49:57,687 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.Web.WebSpiderWebModule, SnowMoonFlowers.WebSpider.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:49:57,689 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:49:57,690 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:49:57,690 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:49:57,690 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:49:57,690 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderDataModule, SnowMoonFlowers.WebSpider.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:49:57,690 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:49:57,691 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderCoreModule, SnowMoonFlowers.WebSpider.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:49:57,691 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderApplicationModule, SnowMoonFlowers.WebSpider.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:49:57,691 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: SnowMoonFlowers.WebSpider.WebSpiderWebApiModule, SnowMoonFlowers.WebSpider.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:49:57,691 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.0.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:49:57,694 [40   ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2017-05-17 15:49:58,004 [40   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: SnowMoonFlowers.WebSpider.EntityFramework.WebSpiderDbContext, SnowMoonFlowers.WebSpider.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-05-17 15:49:58,930 [40   ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2017-05-17 15:49:58,937 [40   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-05-17 15:49:58,938 [40   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-05-17 15:49:58,942 [40   ] Abp.Localization.LocalizationManager     - Initialized localization source: WebSpider
+DEBUG 2017-05-17 15:49:59,287 [40   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
