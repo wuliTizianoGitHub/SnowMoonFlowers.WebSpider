@@ -64,9 +64,9 @@ namespace SnowMoonFlowers.WebSpider.EntityFramework.Repositories
             data.HtmlContent = "";
             data.ProtocolType = Facility.Enums.EnumProtocolType.HTTPS;
             _context.BiliBiliHtmls.Add(data);
-            
 
-            //html = Regex.Replace(html.Trim(), "\\s+", " ");
+
+            html = Regex.Replace(html.Trim(), "\\s+", " ");
             //Match m = Regex.Match(html, "<div class=\"menu.*\">.*</div>");
 
 
@@ -74,9 +74,15 @@ namespace SnowMoonFlowers.WebSpider.EntityFramework.Repositories
             // (?<GroupName>RegEx)格式定义一个命名分组，我们在上面定义了一个HtmlTag的标签分组，用来存放匹配到的Html标签名。Quote分组是用来给后面的匹配使用的。
 
 
-            Match m = Regex.Match(html, "<(?<HtmlTag>[\\w]+)[^>]*\\s(class)|(id)=(?<Quote>[\"]?)menu.*(?(Quote)\\k<Quote>)[\"]?[^>]*>((?<Nested><\\k<HtmlTag>[^>]*>)|</\\k<HtmlTag>>(?<-Nested>)|.*?)*</\\k<HtmlTag>>");
+            Match m = Regex.Match(html, "<(?<HtmlTag>[\\w]+)[^>]*\\sclass=(?<Quote>[\"']?)\"menu-wrapper\"(?(Quote)\\k<Quote>)[\"']?[^>]*>(((?<Nested><\\k<HtmlTag>[^>]*>)|</\\k<HtmlTag>>(?<-Nested>)|.*?)*)</\\k<HtmlTag>>", RegexOptions.Singleline);
+
+            //Match m = Regex.Match(html, "<div\\s[^>]*class=\"menu.*\"[^>]*>(<ul \\s[^>]*class=\".*menu.*\">*?</ul>|.)*?</div> ");
+
+            //Match m = Regex.Match(html, "<(?<HtmlTag>[\\w]+)[^>]*\\s(class)|(id)=(?<Quote>[\"]?)menu.*(?(Quote)\\k<Quote>)[\"]?[^>]*>((?<Nested><\\k<HtmlTag>[^>]*>)|</\\k<HtmlTag>>(?<-Nested>)|.*?)*</\\k<HtmlTag>>");
             string str1= m.Groups[0].Value;
 
+
+            str1 = str1.Substring(0,str1.IndexOf("</div>"));
 
             //Match m = Regex.Match(html, "<(?<HtmlTag>[\\w]+)[^>]*\\sclass=(?<Quote>[\"']?)menu.*(?(Quote)\\k<Quote>)[^>]*?(/>|>((?<Nested><\\k<HtmlTag>[^>]*>)|</\\k<HtmlTag>>(?<-Nested>)|.*?)*</\\k<HtmlTag>>)");
 
