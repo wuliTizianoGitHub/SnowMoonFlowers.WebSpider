@@ -103,9 +103,9 @@ namespace SnowMoonFlowers.WebSpider.EntityFramework.Repositories
 
                 //获取菜单项
                 //将多余空格转换为单个空格
-                //proxyhtml = Regex.Replace(proxyhtml.Trim(), "\\s+", " ");
+                //proxyhtml  = Regex.Replace(proxyhtml.Trim(), "\\s+", " ");
                 
-
+                   
 
                 return proxyhtml;
             }
