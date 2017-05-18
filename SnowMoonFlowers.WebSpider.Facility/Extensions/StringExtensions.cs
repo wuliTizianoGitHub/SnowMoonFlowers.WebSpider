@@ -13,7 +13,7 @@ namespace SnowMoonFlowers.WebSpider.Facility.Extensions
             int firstIndex  =  str.IndexOf(startStr);
             int lastIndex = str.IndexOf(endStr);
 
-            return str.Substring(firstIndex+ startStr.Length, lastIndex-firstIndex- endStr.Length);
+            return str.Substring(firstIndex+ startStr.Length, lastIndex-firstIndex- endStr.Length+1);
         }
     }
 }

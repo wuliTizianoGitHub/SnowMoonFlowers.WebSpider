@@ -33,6 +33,9 @@ namespace SnowMoonFlowers.WebSpider.Entities
         public virtual EnumProtocolType ProtocolType { get; set; }
 
 
+        //public virtual Tag
+
+
         /// <summary>
         /// 数据源
         /// </summary>
